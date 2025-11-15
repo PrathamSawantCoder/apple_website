@@ -26,7 +26,13 @@ const noChangeParts = [
     "Object_10",
 ];
 
-const performanceImages = [
+export interface PerformanceImage {
+  id: string;
+  src: string;
+  alt?: string;
+}
+
+export const performanceImages : PerformanceImage[] = [
     { id: "p1", src: "/performance1.png" },
     { id: "p2", src: "/performance2.png" },
     { id: "p3", src: "/performance3.png" },
@@ -36,41 +42,83 @@ const performanceImages = [
     { id: "p7", src: "/performance7.png" },
 ];
 
-const performanceImgPositions = [
+
+
+
+export interface PerformanceImgPosition {
+  id: string;
+  desktop: {
+        left?: number;
+        right?: number;
+        top?: number;
+        bottom?: number;
+    };
+    mobile?: {
+        left?: number;
+        right?: number;
+        top?: number;
+        bottom?: number;
+    };
+  
+}
+export const performanceImgPositions : PerformanceImgPosition[] = [
     {
         id: "p1",
-        left: 5,
-        bottom: 65,
+        desktop: { 
+            left: 5,
+            bottom: 65,
+        },
+        mobile: { 
+
+        },
     },
     {
         id: "p2",
+        desktop: {
         right: 10,
         bottom: 60,
+        },
+        mobile: {},
     },
     {
         id: "p3",
+        desktop: {
         right: -5,
         bottom: 45,
+        },
+        mobile: {},
     },
     {
         id: "p4",
+        desktop: {
         right: -10,
         bottom: 0,
+        },
+        mobile: {},
     },
     {
         id: "p5",
+        desktop: {
         left: 20,
         bottom: 50,
+        },
+        mobile: {},
     },
     {
         id: "p6",
+        desktop: {
         left: 2,
         bottom: 30,
+        },
+        mobile: {},
     },
     {
         id: "p7",
+        desktop: {
         left: -5,
         bottom: 0,
+        },
+        mobile: {},
     },
 ];
 
@@ -134,6 +182,4 @@ export {
     footerLinks,
     navLinks,
     noChangeParts,
-    performanceImages,
-    performanceImgPositions,
 };
