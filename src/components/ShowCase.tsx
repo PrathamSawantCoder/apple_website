@@ -65,22 +65,22 @@ const ShowCase = () => {
 
                     <div className="max-w-3xs space-y-14">
                         <div className="space-y-2">
-                            <p>
-                                Up to
+                            
+                                <p>Up to</p>
                                 <h3>4x faster</h3>
-                                pro rendering performance 
-                                than M2
-                            </p>
+                                <p>pro rendering performance 
+                                than M2</p>
+                            
                         </div>
 
                     </div>
                     <div className="max-w-3xs space-y-14">
                         <div className="space-y-2">
-                            <p>
-                                Up to
+                            
+                                <p>Up to</p>
                                 <h3>1.5x faster</h3>
-                                CPU performance than M2
-                            </p>
+                                <p>CPU performance than M2</p>
+                            
                         </div>
 
                     </div>

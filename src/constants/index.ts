@@ -47,6 +47,12 @@ export const performanceImages : PerformanceImage[] = [
 
 export interface PerformanceImgPosition {
   id: string;
+  left?: number;
+  right?: number;
+  top?: number;
+  bottom?: number;
+  transform?: string;
+
   desktop: {
         left?: number;
         right?: number;
@@ -61,68 +67,96 @@ export interface PerformanceImgPosition {
     };
   
 }
+
 export const performanceImgPositions : PerformanceImgPosition[] = [
     {
         id: "p1",
-        desktop: { 
+        desktop: {
             left: 5,
             bottom: 65,
         },
-        mobile: { 
-
+        mobile: {
+            left: 33,
+            bottom: 55,
         },
     },
     {
         id: "p2",
         desktop: {
-        right: 10,
-        bottom: 60,
+            right: 10,
+            bottom: 60,
         },
-        mobile: {},
+        mobile: {
+            right: 37,
+            bottom: 60,
+        },
     },
     {
         id: "p3",
         desktop: {
-        right: -5,
-        bottom: 45,
+            right: -5,
+            bottom: 45,
         },
-        mobile: {},
+        mobile: {
+            right: 30,
+            bottom: 35,
+        },
     },
     {
         id: "p4",
         desktop: {
-        right: -10,
-        bottom: 0,
+            right: -10,
+            bottom: 0,
         },
-        mobile: {},
+        mobile: {
+            right: 30,
+            bottom: 0,
+        },
     },
     {
         id: "p5",
         desktop: {
-        left: 20,
-        bottom: 50,
+            left: 20,
+            bottom: 50,
         },
-        mobile: {},
+        mobile: {
+            left: 50,
+            bottom: 50,
+        },
     },
     {
         id: "p6",
         desktop: {
-        left: 2,
-        bottom: 30,
+            left: 2,
+            bottom: 30,
         },
-        mobile: {},
+        mobile: {
+            left: 30,
+            bottom: 30,
+        },
     },
     {
         id: "p7",
         desktop: {
-        left: -5,
-        bottom: 0,
+            left: -5,
+            bottom: 0,
         },
-        mobile: {},
+        mobile: {
+            left: 35,
+            bottom: 0,
+        },
     },
 ];
 
-const features = [
+export interface Features {
+    id: number;
+    icon: string;
+    highlight: string;
+    text: string;
+    styles: string;
+}
+
+export const features: Features[] = [
     {
         id: 1,
         icon: "/feature-icon1.svg",
@@ -177,9 +211,9 @@ const footerLinks = [
 ];
 
 export {
-    features,
     featureSequence,
     footerLinks,
     navLinks,
     noChangeParts,
+    
 };

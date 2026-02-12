@@ -6,6 +6,7 @@ import {
   performanceImgPositions,
 } from "../constants/index.ts";
 
+import type { PerformanceImage, PerformanceImgPosition } from "../constants/index.ts";
 import {useMediaQuery} from "react-responsive";
 
 
@@ -25,7 +26,8 @@ const Performance = () => {
                 {
                     opacity: 1,
                     y: 0,
-                    ease: "power1.out",
+                    duration: 0.8,
+                    ease: "power2.out",
                     scrollTrigger: {
                         trigger: ".content p",
                         start: "top bottom",
@@ -35,8 +37,6 @@ const Performance = () => {
                     },
                 }
             );
-
-            if (isMobile) return;
 
             // Image Positioning Timeline
             const tl = gsap.timeline({
@@ -50,21 +50,45 @@ const Performance = () => {
                 },
             });
 
-            
+            // Get the appropriate position data based on device type
+            const getPositionData = (item: PerformanceImgPosition) => {
+                return isMobile && item.mobile ? item.mobile : item.desktop;
+            };
+
             performanceImgPositions.forEach((item) => {
-                if (item.id === "p5") return;
+                if (item.id === "p5") return; 
 
+                const positionData = getPositionData(item);
                 const selector = `.${item.id}`;
-                const vars: Record<string, string> = {};
+                const vars: Record<string, unknown> = {};
 
-                if (typeof item.left === "number") vars.left = `${item.left}%`;
-                if (typeof item.right === "number") vars.right = `${item.right}%`;
-                if (typeof item.bottom === "number") vars.bottom = `${item.bottom}%`;
+                
+                if (typeof positionData.left !== 'undefined') {
+                    vars.left = `${positionData.left}%`;
+                }
+                if (typeof positionData.right !== 'undefined') {
+                    vars.right = `${positionData.right}%`;
+                }
+                if (typeof positionData.bottom !== 'undefined') {
+                    vars.bottom = `${positionData.bottom}%`;
+                }
+                if (typeof positionData.top !== 'undefined') {
+                    vars.top = `${positionData.top}%`;
+                }
 
-                if (item.transform) vars.transform = item.transform;
+                if (item.transform) {
+                    vars.transform = item.transform;
+                }
 
                 tl.to(selector, vars, 0);
             });
+
+            return () => {
+                if (tl.scrollTrigger) {
+                    tl.scrollTrigger.kill();
+                }
+                tl.kill();
+            }
         },
         { scope: sectionRef, dependencies: [isMobile] }
     );

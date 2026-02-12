@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <section id="hero">
       <div>
-        <h1>MacBook Pro</h1>
+        <h1>MacBook Pro </h1>
         <img src="/title.png" alt="Macbook Title" />
 
         <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
