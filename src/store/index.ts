@@ -1,4 +1,3 @@
-import { texture } from 'three/tsl';
 import {create} from 'zustand';
 
 interface MacbookStore {

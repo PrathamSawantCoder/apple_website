@@ -1,4 +1,4 @@
-import { Canvas, useThree } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 import StudioLights from "./three/StudioLights.tsx";
 import { features, featureSequence } from '../constants/index.ts';
