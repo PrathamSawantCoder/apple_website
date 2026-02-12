@@ -6,7 +6,7 @@ import {
   performanceImgPositions,
 } from "../constants/index.ts";
 
-import type { PerformanceImage, PerformanceImgPosition } from "../constants/index.ts";
+import type {PerformanceImgPosition } from "../constants/index.ts";
 import {useMediaQuery} from "react-responsive";
 
 
