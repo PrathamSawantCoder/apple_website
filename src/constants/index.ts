@@ -26,7 +26,13 @@ const noChangeParts = [
     "Object_10",
 ];
 
-const performanceImages = [
+export interface PerformanceImage {
+  id: string;
+  src: string;
+  alt?: string;
+}
+
+export const performanceImages : PerformanceImage[] = [
     { id: "p1", src: "/performance1.png" },
     { id: "p2", src: "/performance2.png" },
     { id: "p3", src: "/performance3.png" },
@@ -36,45 +42,121 @@ const performanceImages = [
     { id: "p7", src: "/performance7.png" },
 ];
 
-const performanceImgPositions = [
+
+
+
+export interface PerformanceImgPosition {
+  id: string;
+  left?: number;
+  right?: number;
+  top?: number;
+  bottom?: number;
+  transform?: string;
+
+  desktop: {
+        left?: number;
+        right?: number;
+        top?: number;
+        bottom?: number;
+    };
+    mobile?: {
+        left?: number;
+        right?: number;
+        top?: number;
+        bottom?: number;
+    };
+  
+}
+
+export const performanceImgPositions : PerformanceImgPosition[] = [
     {
         id: "p1",
-        left: 5,
-        bottom: 65,
+        desktop: {
+            left: 5,
+            bottom: 65,
+        },
+        mobile: {
+            left: 33,
+            bottom: 55,
+        },
     },
     {
         id: "p2",
-        right: 10,
-        bottom: 60,
+        desktop: {
+            right: 10,
+            bottom: 60,
+        },
+        mobile: {
+            right: 37,
+            bottom: 60,
+        },
     },
     {
         id: "p3",
-        right: -5,
-        bottom: 45,
+        desktop: {
+            right: -5,
+            bottom: 45,
+        },
+        mobile: {
+            right: 30,
+            bottom: 35,
+        },
     },
     {
         id: "p4",
-        right: -10,
-        bottom: 0,
+        desktop: {
+            right: -10,
+            bottom: 0,
+        },
+        mobile: {
+            right: 30,
+            bottom: 0,
+        },
     },
     {
         id: "p5",
-        left: 20,
-        bottom: 50,
+        desktop: {
+            left: 20,
+            bottom: 50,
+        },
+        mobile: {
+            left: 50,
+            bottom: 50,
+        },
     },
     {
         id: "p6",
-        left: 2,
-        bottom: 30,
+        desktop: {
+            left: 2,
+            bottom: 30,
+        },
+        mobile: {
+            left: 30,
+            bottom: 30,
+        },
     },
     {
         id: "p7",
-        left: -5,
-        bottom: 0,
+        desktop: {
+            left: -5,
+            bottom: 0,
+        },
+        mobile: {
+            left: 35,
+            bottom: 0,
+        },
     },
 ];
 
-const features = [
+export interface Features {
+    id: number;
+    icon: string;
+    highlight: string;
+    text: string;
+    styles: string;
+}
+
+export const features: Features[] = [
     {
         id: 1,
         icon: "/feature-icon1.svg",
@@ -129,11 +211,9 @@ const footerLinks = [
 ];
 
 export {
-    features,
     featureSequence,
     footerLinks,
     navLinks,
     noChangeParts,
-    performanceImages,
-    performanceImgPositions,
+    
 };
