@@ -14,9 +14,9 @@ const ProductViewer = () => {
 
   return (
     <section id="product-viewer">
-        <h2>Take a closer look.</h2>
+        <h2>See it closer.</h2>
         <div className="controls">
-            <p className="info">MacBook Pro | Available in 14" and 16" in Space Gray & Dark colors</p>
+            <p className="info">MacLet Pro | Available in 14" and 16" in Space Gray & Dark colors</p>
 
             <div className="flex-center gap-5 mt-5">
                 <div className="color-control">

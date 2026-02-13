@@ -12,12 +12,12 @@ const Home = () => {
   return (
     <section id="hero">
       <div>
-        <h1>MacBook Pro </h1>
+        <h1>MacLet Pro </h1>
         <img src="/title.png" alt="Macbook Title" />
 
         <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
 
-        <button>Buy Now</button>
+        <button>Get Now</button>
         <p>From $1299 or $41.62/mo. for 24 mo.</p>
       </div>
     </section>

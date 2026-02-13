@@ -37,7 +37,7 @@ const ShowCase = () => {
             <div className='content'>
                 <div className="wrapper">
                     <div className='lg:max-w-md'>
-                        <h2>Rocket Chip</h2>
+                        <h2>Spaceship Chip</h2>
                         <div className="space-y-5 mt-7 pe-10">
                             <p>
                                 Introducing {" "}
@@ -48,7 +48,7 @@ const ShowCase = () => {
 
                             </p>
                             <p>
-                                It drives Apple Intelligence on iPad Pro, so you can write, create, and accomplish more with ease. All in a design that’s unbelievably thin, light, and powerful.
+                                It drives Apple Intelligence on HiPad Pro, so you can write, create, and accomplish more with ease. All in a design that’s unbelievably thin, light, and powerful.
                             </p>
                             <p>
                                 A brand-new display engine delivers breathtaking precision, color accuracy, and brightness. And a next-gen GPU with hardware-accelerated ray tracing brings console-level graphics to your fingertips.
