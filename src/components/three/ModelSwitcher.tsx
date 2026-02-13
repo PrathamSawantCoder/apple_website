@@ -1,9 +1,9 @@
 import { PresentationControls } from '@react-three/drei';
-import React, { useRef } from 'react'
 import MacbookModel16 from '../models/Macbook-16.jsx';
 import { gsap } from 'gsap';
 import MacbookModel14 from '../models/Macbook-14.jsx';
 import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 import * as THREE from 'three';
 
 const ANIMATION_DURATION = 1;
